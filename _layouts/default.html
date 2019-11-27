@@ -53,15 +53,16 @@
 		</nav>
 	</div><!-- end header -->
 
-	<div class="wrapper container Shekinah-McClymont-lass="light" margin:0; padding: 15px;">
+	<div class="wrapper container">
 
 		<section>
 		<div id="title">
-					<h1>{{ current.title }>
+					<h1>{{ Shekinah-McClymont-lass="light" margin:0; padding: 15px;}>
 					<hr>
 			</div>
 			
 			{{ current.content }}
+			<div id= 
 		</section>
 			
             <div id="title">
@@ -71,8 +72,8 @@
 
 			{{ current.content }}
 
-		</section>
-		<section>
+		</
+">ection>
 			{% for i in (1..2) %}
                 <div class="row">
                     {% assign offset = forloop.index0 | times: 3 %}
@@ -136,9 +137,7 @@
             ga('create', '{{ site.google_analytics }}', 'auto');
             ga('send', 'pageview');
         </script>
-	{% endif %}
-	{% unless page.collection %}
-        {% if page.id %}
+	{% endif %}       {% if page.id %}
             <script>
                 window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#{{ page.id }}"
             </script>
