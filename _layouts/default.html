@@ -29,13 +29,11 @@
 </head>
 
 <body>
-	<div id="header-light">
-		<nav class="navbar navbar-expand-lg navbar-white bg-primary">
+	<div id="header">
+		<nav class="navbar navbar-expand-lg navbar-white bg-primary card text-white bg-primary mb-3">
 			<a class=Shekinah McClmyont href="#">Shekinah McClmyont</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColorlight" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-               		<div class="card text-white bg-primary mb-3">
-           			</div>
-			<a class=Home href="#">Home</a>
+           		<a class=Home href="#">Home</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColorlight" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                		<a class=About Me href="#">About Me</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColorlight" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,7 +84,7 @@
                     {% for post in posts limit:3 offset:offset %}
                         <div class="light">
                             <div class="card text-white bg-primary mb-3">
-                                <div class="card-header">{{ NoFrills }}</div>
+                                <div class="card-header">Nofrills</div>
                                 <div class="card-body">
                                     <a href="{{ post.url }}">
                                         {% if post.thumbnail %}
@@ -100,8 +98,26 @@
                     {% endfor %}
                 </div>
 			{% endfor %}
-		<div class="row">
-		</div>
+		 <div class="row">
+                    {% assign offset = forloop.index0 | times: 3 %}
+                    {% assign posts = site.posts | where_exp:"post","post.url != current.url" %}
+                    {% for post in posts limit:3 offset:offset %}
+                        <div class="light">
+                            <div class="card text-white bg-primary mb-3">
+                                <div class="card-header">Nofrills</div>
+                                <div class="card-body">
+                                    <a href="{{ post.url }}">
+                                        {% if post.thumbnail %}
+                                            <img src="{{ post.thumbnail }}" alt="{{ post.title }}" title="{{ post.title }}" />
+                                        {% endif %}
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                </div>
+			{% endfor %}
 		</section>
 		<section>
 			{% for static in site.pages %}
