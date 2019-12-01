@@ -38,9 +38,11 @@
             </button>
                 {% for static in site.pages %}
                     {% if static.id %}
-			<li class="nav-item">
+			<div class="light">
+			<nav class="nav-item">
                             <a class="nav-link" href="#">Home</a>
-                        </li>
+				</nav>
+			</div>
 
 			<li class="nav-item">
                             <a class="nav-link" href="#{{ static.id }}">{{ static.title }}</a>
