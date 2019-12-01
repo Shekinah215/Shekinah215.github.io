@@ -33,18 +33,20 @@
 		
 		<nav class="navbar navbar-expand-lg navbar-white bg">
 			<a class=Shekinah McClmyont href="#">Shekinah McClmyont</a>
+		<nav class="navbar navbar-expand-lg navbar-white bg">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColorlight" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+           		<a class=Home href="#">Home</a>
+		<nav class="navbar navbar-expand-lg navbar-white bg">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColorlight" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-           		<a class=Home href>Home</a>
+               		<a class=About Me href="#">About Me</a>
+		<nav class="navbar navbar-expand-lg navbar-white bg">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColorlight" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-               		<a class=About Me href>About Me</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColorlight" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-			<a class=Work href>Work</a>
+			<a class=Work href="#">Work</a>
+		<nav class="navbar navbar-expand-lg navbar-white bg">
 			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColorlight" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-			<a class=Contact href>Contact</a>
+			<a class=Contact href="#">Contact</a>
 				<span class="-icon"></span>
             </button>
-			<div class="collapse navbar-collapse" id="navbarColor3">
-				<ul class="navbar-nav ml-auto">
 
                 {% for static in site.pages %}
                     {% if static.id %}
@@ -71,11 +73,11 @@
 			<div id="title">
 				<div id="class">
 				<h1> UX Designer</h1>
-			</div>
-	</section>
-		    <div id="work">
+					<div id="work">
 		    <h1> HARD WORK. MOTIVATION. DEDICATION</h1>
 		    </div>
+			</div>
+	</section>
 
 			{% for i in (1..2) %}
                 <div class="row">
@@ -133,10 +135,9 @@
                     </div>
 
                 {% endif %}
-			{% endfor %}
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColorlight" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
 			<a class=Contact href>Contact</a>
-
+			{% endfor %}
 		</section>
 		<footer id="footer">
 		</footer>
