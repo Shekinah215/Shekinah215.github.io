@@ -3,13 +3,26 @@
 @import "bootstrap.min.css";
 
 img{
-    max-width: 75%;
+    max-width: 60%;
+    text-align: center; 
+    width: 100%;
 }
-#button contact{
+header{
+    margin: 100px 0 200px 0;
+    text-align: center;
+} 
+header p{
+    width: 45%;
+    margin: 30px auto 0 auto; 
+}
+header a{
+    color: #FF4A5E;
+    text-decoration:none;
+}
+#buttoncontact{
    margin-right:100px; max-width: 100%;
   text-align: right; 
 }
-    
 #contact{
   margin-right:100px; max-width: 100%;
   text-align: right; 
