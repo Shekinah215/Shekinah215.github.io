@@ -45,10 +45,10 @@
                             <a class="nav-link" href="#Work">Work</a>
                         </li>
 			<li class="nav-item">
-                            <a class="nav-link" href="#About">{{ static.title }}</a>
+                            <a class="nav-link" href="#{{ static.id }}">{{ static.title }}</a>
 			</li>
 			<li class="nav-item">
-                            <a class="nav-link" href="#Contact">{{ static.title }}</a>
+                            <a class="nav-link" href="#{{ static.id }}">{{ static.title }}</a>
 			</li>
                     {% endif %}
                 {% endfor %}
