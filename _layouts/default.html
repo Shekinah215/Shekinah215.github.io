@@ -34,23 +34,15 @@
 		<nav class="navbar navbar-expand-lg navbar-white bg">
 			<a class=Shekinah McClmyont href="#">Shekinah McClmyont</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColorlight" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="-icon"></span>
+			 <a class="Home"href="#">Home</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColorlight" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="-icon"></span>
             </button>
                 {% for static in site.pages %}
                     {% if static.id %}
-			<div class="light">
 			<nav class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-				</nav>
-			</div>
-			<div class="light">
-			<nav class="nav-item">
-                            <a class="nav-link" href="{{ static.id }}">{{ static.title }}</a>
-				</nav>
-			</div>
-			<li class="nav-item">
                             <a class="nav-link" href="#{{ static.id }}">{{ static.title }}</a>
-			</li>
+			</nav>
                     {% endif %}
                 {% endfor %}
 
