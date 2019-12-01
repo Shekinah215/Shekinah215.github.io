@@ -120,13 +120,13 @@
                         <h2>About</h2>
 			    <p>My name is Shekinah McClymont </p>
                     </div>
-			<div class="row">
-                  {% assign offset = forloop.index0 | times: 3 %}
+			 <div class align="right-row">
+                    {% assign offset = forloop.index0 | times: 3 %}
                     {% assign posts = site.posts | where_exp:"post","post.url != current.url" %}
                     {% for post in posts limit:3 offset:offset %}
-			<div class="light">
+                        <div class="light">
                             <div class="card text-white bg-primary mb-3">
-                                <div class="card-header">Work</div>
+                                <div class="card-header">Nofrills</div>
                                 <div class="card-body">
                                     <a href="{{ post.url }}">
                                         {% if post.thumbnail %}
@@ -136,6 +136,9 @@
                                 </div>
                             </div>
 
+                        </div>
+                    {% endfor %}
+                </div>
                         </div>
                         <h2>Values</h2>
 			 <p>My name is Shekinah McClymont </p>
