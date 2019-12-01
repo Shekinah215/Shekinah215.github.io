@@ -120,6 +120,21 @@
                         <h2>About</h2>
 			    <p>My name is Shekinah McClymont </p>
                     </div>
+			<div class="row">
+                  
+                        <div class="light">
+                            <div class="card text-white bg-primary mb-3">
+                                <div class="card-header">Work</div>
+                                <div class="card-body">
+                                    <a href="{{ post.url }}">
+                                        {% if post.thumbnail %}
+                                            <img src="{{ post.thumbnail }}" alt="{{ post.title }}" title="{{ post.title }}" />
+                                        {% endif %}
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
                         <h2>Values</h2>
 			 <p>My name is Shekinah McClymont </p>
 			<h2 align="right">Skills</h2>
