@@ -116,19 +116,20 @@
                 </div>
 		</section>
 		<section>
-			{% for static in site.pages %}
-                {% if static.id %}
-                    <div id="{{ static.id }}">
-                    {% if static.thumbnail %}
-                        <img src="{{ static.thumbnail }}" alt="{{ static.title }}" title="{{ static.title }}" />
-                    {% endif %}
-                    <div id="header">
+			 <div id="header">
                         <h1>About</h1>
 			    <p>My name is Shekinah McClymont </p>
                     </div>
 		<div id="header">
                         <h1>Values</h1>
 			 <p>My name is Shekinah McClymont </p>
+			{% for static in site.pages %}
+                {% if static.id %}
+                    <div id="{{ static.id }}">
+                    {% if static.thumbnail %}
+                        <img src="{{ static.thumbnail }}" alt="{{ static.title }}" title="{{ static.title }}" />
+                    {% endif %}
+                
                     </div
 			{{ My name is Shekinah McClymont}}
 				
