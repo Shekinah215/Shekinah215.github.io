@@ -39,16 +39,16 @@
                 {% for static in site.pages %}
                     {% if static.id %}
 			<li class="nav-item">
-                            <a class="nav-link" href="#Home"</a>
+                            <a class="nav-link" href="#Home"< Home</a>
                         </li>
 			<li class="nav-item">
-                            <a class="nav-link" href="#About Me"></a>
+                            <a class="nav-link" href="#About">{{ static.title }}</a>
                         </li>
 			<li class="nav-item">
-                            <a class="nav-link" href="#Work"</a>
+                            <a class="nav-link" href="#Work">Work</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Contact"></a>
+			<li class="nav-item">
+                            <a class="nav-link" href="#Contact">{{ static.title }}</a>
 			</li>
                     {% endif %}
                 {% endfor %}
