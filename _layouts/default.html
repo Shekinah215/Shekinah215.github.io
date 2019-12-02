@@ -85,7 +85,7 @@
 	
 		<section>
 			 <div class ="row">
-				 <div id="header">
+				 <div id="left-header">
                         <h2>About</h2>
 			    <p> My name is Shekinah McClymont, and I’m a rambunctious innovated and responsible 19-year-old. I’m a very independent person and was a Retreat Leader at my high school and apart of an initiative called Unity. Within this group I’ve learned to communicate effectively and maintain a good work relationship with others. Also, I’ve learned to function independently and become a multidisciplinary team member in a fast-paced demanding environment. In addition, I play Rep basketball and was the captain of my school’s rugby team. I love playing sports, it’s a huge part of my life and has become a passion of mine. Throughout life it’s taught me many things that’s helped me become the determined and hard-working person I am today.
  </p>
@@ -94,30 +94,7 @@
 				 <br>
 				 <br>
 			
-				 {% for i in (1..2) %}
-                <div class="row">
-                    {% assign offset = forloop.index0 | times: 3 %}
-                    {% assign posts = site.posts | where_exp:"post","post.url != current.url" %}
-                    {% for post in posts limit:3 offset:offset %}
-              
-                                        {% if post.thumbnail %}
-                                            <img src="{{ post.thumbnail }}" alt="{{ post.title }}" title="{{ post.title }}" />
-                                        {% endif %}
-                               
-                        </div>
-                    {% endfor %}
-                </div>
-		{% endfor %}
-				 <div id="img-main" class="col-7 align-c" style="visibility: visible; left: 0%; opacity: 1;">
-					<img class="major preload" src="{{ post.thumbnail }}" alt="{{ post.title }}">
-				</div>
-				 <img class="major preload" src="{{ post.thumbnail }}" alt="{{ post.title }}">
-				 {% assign offset = forloop.index0 | times: 3 %}
-                    {% assign posts = site.posts | where_exp:"post","post.url != current.url" %}
-                    {% for post in posts limit:3 offset:offset %}
-			 {% endfor %}
-			</div>
-		    </section>
+		
 	<div class="wrapper container">
                        <div class="row">
 				<div id="header">
@@ -169,6 +146,18 @@
 			<div id="title">
 				<h1> Home Ami</h1>
 				<p></p>
+				{% for i in (1..2) %}
+                <div class="row">
+                    {% assign offset = forloop.index0 | times: 3 %}
+                    {% assign posts = site.posts | where_exp:"post","post.url != current.url" %}
+                    {% for post in posts limit:3 offset:offset %}
+              
+                                        {% if post.thumbnail %}
+                                            <img src="{{ post.thumbnail }}" alt="{{ post.title }}" title="{{ post.title }}" />
+                                        {% endif %}
+                               
+                        </div>
+                    {% endfor %}
 			<div id="title">
 				<h1> Art Portfolio</h1>
 				<p></p>
