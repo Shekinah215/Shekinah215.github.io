@@ -82,49 +82,7 @@
 			<br>
 		</div>
 		</div>
-	</section>
-
-			{% for i in (1..2) %}
-                <div class="row">
-                    {% assign offset = forloop.index0 | times: 3 %}
-                    {% assign posts = site.posts | where_exp:"post","post.url != current.url" %}
-                    {% for post in posts limit:3 offset:offset %}
-              <div class="light">
-                            <div class="card text-white bg-primary mb-3">
-                                <div class="card-header">Nofrills</div>
-                                <div class="card-body">
-                                    <a href="{{ post.url }}">
-                                        {% if post.thumbnail %}
-                                            <img src="{{ post.thumbnail }}" alt="{{ post.title }}" title="{{ post.title }}" />
-                                        {% endif %}
-                               </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    {% endfor %}
-                </div>
-		{% endfor %}
-		 <div class="row">
-                    {% assign offset = forloop.index0 | times: 3 %}
-                    {% assign posts = site.posts | where_exp:"post","post.url != current.url" %}
-                    {% for post in posts limit:3 offset:offset %}
-                        <div class="light">
-                            <div class="card text-white bg-primary mb-3">
-                                <div class="card-header">Nofrills</div>
-                                <div class="card-body">
-                                    <a href="{{ post.url }}">
-                                        {% if post.thumbnail %}
-                                            <img src="{{ post.thumbnail }}" alt="{{ post.title }}" title="{{ post.title }}" />
-                                        {% endif %}
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    {% endfor %}
-                </div>
-		</section>
+	
 		<section>
 			 <div class ="row">
 				 <div id="header">
