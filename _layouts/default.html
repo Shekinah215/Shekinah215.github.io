@@ -94,7 +94,30 @@
 				 <br>
 				 <br>
 			
-		
+				 {% for i in (1..2) %}
+                <div class="row">
+                    {% assign offset = forloop.index0 | times: 3 %}
+                    {% assign posts = site.posts | where_exp:"post","post.url != current.url" %}
+                    {% for post in posts limit:3 offset:offset %}
+              
+                                        {% if post.thumbnail %}
+                                            <img src="{{ post.thumbnail }}" alt="{{ post.title }}" title="{{ post.title }}" />
+                                        {% endif %}
+                               
+                        </div>
+                    {% endfor %}
+                </div>
+		{% endfor %}
+				 <div id="img-main" class="col-7 align-c" style="visibility: visible; left: 0%; opacity: 1;">
+					<img class="major preload" src="{{ post.thumbnail }}" alt="{{ post.title }}">
+				</div>
+				 <img class="major preload" src="{{ post.thumbnail }}" alt="{{ post.title }}">
+				 {% assign offset = forloop.index0 | times: 3 %}
+                    {% assign posts = site.posts | where_exp:"post","post.url != current.url" %}
+                    {% for post in posts limit:3 offset:offset %}
+			 {% endfor %}
+			</div>
+		    </section>
 	<div class="wrapper container">
                        <div class="row">
 				<div id="header">
@@ -142,29 +165,16 @@
 			<hr>
 			<div id="title">
 				<h1> Pop Vinyl</h1>
-				<p>I created a pop culture collectible of myself with Adobe Illustrator. </p>
+				<p></p>
 			<div id="title">
 				<h1> Home Ami</h1>
-				<p>Home Ami is a homeless kit which is sustainable and efficient for the long run. It originated as a box that was then transformed into a kit for homeless people and families.
-</p>
-				{% for i in (1..2) %}
-                <div class="row">
-                    {% assign offset = forloop.index0 | times: 3 %}
-                    {% assign posts = site.posts | where_exp:"post","post.url != current.url" %}
-                    {% for post in posts limit:3 offset:offset %}
-              
-                                        {% if post.thumbnail %}
-                                            <img src="{{ post.thumbnail }}" alt="{{ post.title }}" title="{{ post.title }}" />
-                                        {% endif %}
-                               
-                        </div>
-                    {% endfor %}
+				<p></p>
 			<div id="title">
 				<h1> Art Portfolio</h1>
-				<p> I created a portfolio that consists of multiple art projects in different mediums.</p>
+				<p></p>
 			<div id="title">
 				<h1> Individual Prospect</h1>
-				<p>Is a project I created on my own time. </p>
+				<p></p>
 			  </div>
 				
 	
