@@ -135,6 +135,10 @@
 					<img class="major preload" src="{{ post.thumbnail }}" alt="{{ post.title }}">
 				</div>
 				 <img class="major preload" src="{{ post.thumbnail }}" alt="{{ post.title }}">
+				 {% assign offset = forloop.index0 | times: 3 %}
+                    {% assign posts = site.posts | where_exp:"post","post.url != current.url" %}
+                    {% for post in posts limit:3 offset:offset %}
+			 {% endfor %}
 			</div>
                    </section>
                         </div>
